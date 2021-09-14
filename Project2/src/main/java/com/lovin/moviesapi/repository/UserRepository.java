@@ -14,12 +14,16 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     List<User> findByFirstNameContaining(String name);
 
-    //JPQL
-    @Query("select u from User u where u.userEmail=?1")
-    User getUserByEmailAddress(String email);
+//    //JPQL
+    @Query("select u from User u where u.userId=?1")
+    User getUserById(long userId);
 
-    @Query(" u.firstName from User u where u.userEmail = ?1")
-    String getUserFirstNameByEmailAddress(String userEmail);
+//    @Query("delete u.user_id from User where u.user_id = ?1")
+//    User deleteUserById(long userId);
+
+
+//    @Query("u.firstName from User u where u.userEmail = ?1")
+//    String getUserFirstNameByEmailAddress(String userEmail);
 
 
 }
