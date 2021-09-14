@@ -10,6 +10,18 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+# Servers
+Servers/
+dataSources.xml
+misc.xml
+
+#.metadata
+.metadata/
+
+#.idea
+.idea
+.mvn
+
 # Package Files #
 *.jar
 *.war
