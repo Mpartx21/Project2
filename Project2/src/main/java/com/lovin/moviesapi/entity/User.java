@@ -54,5 +54,4 @@ public class User {
             nullable = false
     )
     private String userEmail;
-
 }
