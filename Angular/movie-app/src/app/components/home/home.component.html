@@ -1,0 +1,10 @@
+<div class="container-fluid">
+    <div class="row">
+        <div *ngIf="quotes">
+                <div *ngFor="let movie of movies">
+
+                    <p>{{ movie.title }}  {{ movie.year}}</p>
+                </div>
+        </div>
+    </div>
+</div>
