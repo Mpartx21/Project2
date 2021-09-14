@@ -11,8 +11,8 @@ export class HomeComponent implements OnInit {
   constructor(private data: DataService) { }
 
   ngOnInit(): void {
-    this.data.getMovieByContains().subscribe(data=>{
-      this.movies = data;
+    this.data.getMovieByContains().subscribe(data =>{
+      // this.movies = data;
       console.log(data);
     });
   }
