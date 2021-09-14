@@ -24,4 +24,7 @@ class MoviesApiApplicationTests {
 		userRepository.save(user);
 	}
 
+
+
+
 }
