@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   movies: Movie[] = [];
 
   ngOnInit(): void {
-    this.data.searchMovie('Bat').subscribe(result => {
+    this.data.searchMovie('BatMan').subscribe(result => {
       this.movies = result.Search;
     });
   }
