@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService{
     @Override
     public User getUserById(long userId) {
         Optional<User> user = userRepository.findById(userId);
-        if(!user.isPresent()){
+        if(user.isEmpty()){
             System.out.println("This user Id does not exist");
         }
         return user.get();
@@ -47,4 +47,11 @@ public class UserServiceImpl implements UserService{
        userDB.setUserEmail(user.getUserEmail());
        return userRepository.save(user);
     }
+
+    @Override
+    public User getUserByemailandPword(String email, String password) {
+        return userRepository.getUserByEmailAndPassword(email,password);
+    }
+
+ 
 }

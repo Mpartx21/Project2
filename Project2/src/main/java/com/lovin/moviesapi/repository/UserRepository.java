@@ -3,6 +3,7 @@ package com.lovin.moviesapi.repository;
 import com.lovin.moviesapi.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -24,6 +25,15 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 //    @Query("u.firstName from User u where u.userEmail = ?1")
 //    String getUserFirstNameByEmailAddress(String userEmail);
+// native named params
+@Query(
+        value = "SELECT * from user_table u where u.email_address= :email and u.password = :password",
+        nativeQuery = true
+)
+User getUserByEmailAndPassword(
+        @Param("email") String email,
+        @Param("password")String password
+);
 
 
 }
