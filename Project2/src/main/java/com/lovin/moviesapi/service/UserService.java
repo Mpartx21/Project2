@@ -10,5 +10,5 @@ public interface UserService {
     User getUserById(long userId);
     User deleteUser(long userId);
     User updateUser(long userId, User user);
-    User getUserByemailandPword(String email,String password);
+//    User getUserByemailandPword(String email,String password);
 }
