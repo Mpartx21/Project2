@@ -48,10 +48,10 @@ public class UserServiceImpl implements UserService{
        return userRepository.save(user);
     }
 
-//    @Override
-//    public User getUserByemailandPword(String email, String password) {
-//        return userRepository.getUserByEmailAndPassword(email,password);
-//    }
+    @Override
+    public User getUserByemailandPword(String email, String password) {
+        return userRepository.getUserByEmailAndPassword(email,password);
+    }
 
 
 }
