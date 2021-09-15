@@ -1,7 +1,2 @@
-import {  } from './movie';
+import {User} from "src/app/models/user/user";
 
-describe('Movie', () => {
-  it('should create an instance', () => {
-    expect(new Movie()).toBeTruthy();
-  });
-});

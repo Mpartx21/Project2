@@ -17,8 +17,7 @@ const routes: Routes = [
     { path: 'child', component: ChildComponent }
   ] },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', component: NotfoundComponent },
-  { path: 'register', component: RegisterComponent}
+  { path: '**', component: NotfoundComponent }
 ];
 
 @NgModule({

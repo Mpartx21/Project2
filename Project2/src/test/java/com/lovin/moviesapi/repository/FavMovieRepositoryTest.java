@@ -33,11 +33,11 @@ class FavMovieRepositoryTest {
     }
 
 //    Will run into a stack overflow if ran
-//    @Test
-//    public void displayAllMovies(){
-//        List<UserFavoriteMovies> userFavoriteMovies = repository.findAll();
-//        System.out.println(userFavoriteMovies);
-//    }
+    @Test
+    public void displayAllMovies(){
+        List<UserFavoriteMovies> userFavoriteMovies = repository.findAll();
+        System.out.println(userFavoriteMovies);
+    }
 
 
 
