@@ -54,4 +54,9 @@ public class User {
             nullable = false
     )
     private String userEmail;
+
+    @OneToOne(
+            mappedBy = "user"
+    )
+    private UserFavoriteMovies userFavoriteMovies;
 }
