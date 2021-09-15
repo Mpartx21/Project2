@@ -1,3 +1,5 @@
+import { userFavoriteMovies } from "../userFavoriteMovies/userfavoritemovies";
+
 export interface User {
     userId:number;
     password:string;
@@ -5,4 +7,6 @@ export interface User {
     lastName:string;
     userName:string;
     userEmail:string;
+    userFavoriteMovies:userFavoriteMovies;
+    
 }
