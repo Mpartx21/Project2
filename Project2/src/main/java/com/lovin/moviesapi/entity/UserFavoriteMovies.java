@@ -1,14 +1,13 @@
 package com.lovin.moviesapi.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
-@Data
+@ToString(
+        exclude = "user"
+)
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -26,13 +25,14 @@ public class UserFavoriteMovies {
             strategy = GenerationType.SEQUENCE,
             generator = "movie_sequence"
     )
-    private Long favMovieId;
+    private long favMovieId;
 
     private String movieId;
 
     @OneToOne(
             cascade = CascadeType.ALL,
-            fetch = FetchType.EAGER
+            fetch = FetchType.LAZY,
+            optional=true
     )
     @JoinColumn(
             name = "user_id",
