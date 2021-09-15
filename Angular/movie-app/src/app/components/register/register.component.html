@@ -1,0 +1,32 @@
+<div class="container">
+    <h2>Register</h2>
+    
+    <form >
+        <div class="form-group">
+            <label for="">First Name</label>
+            <input type="text" class="form-control" name="firstName" required>
+            <small class="text-danger">This is required field</small>
+        </div>
+        <div class="form-group">
+            <label for="">Email</label>
+            <input type="text" class="form-control" name="email">
+        </div>
+
+        <div class="form-group">
+            <label for="">Mobile</label>
+            <input type="text" class="form-control" name="mobile" required pattern="^\d{10}$">
+             <div >
+                <small class="text-danger" >Mobile number is required</small>
+                <small class="text-danger" >Mobile number must be 10 digit</small>
+             </div>
+        </div>
+
+        <div class="form-group">
+            <label for="">Password</label>            
+            <input type="text" class="form-control" name="password">
+        </div>
+
+       
+        <input type="submit"  value="Register" class="btn btn-primary">
+    </form>
+</div>
