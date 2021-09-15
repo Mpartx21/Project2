@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from 'src/app/models/movie/movie';
+import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
   selector: 'app-cards',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private data:DataService) { }
+
+  movies:Movie[]=[];
 
   ngOnInit(): void {
+    this.data.searchMovie('BatMan').subscribe(result => {
+      this.movies = result.Search;
+    });
   }
 
 }
