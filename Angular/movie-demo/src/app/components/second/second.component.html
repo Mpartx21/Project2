@@ -7,7 +7,7 @@
                     {{message}}
                 </div>
                 <h2>Login</h2>
-                <form #loginForm="ngForm" (submit)="onSubmit(loginForm.value)">
+                <form #loginForm="ngForm" (submit)="onLogin(loginForm.email,loginForm.password)">
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" class="form-control" 
@@ -24,7 +24,6 @@
                             [class.is-invalid]="password.invalid && password.touched"
                             name="password" ngModel required/>
                     </div>
-                    <input type="checkbox" name="" id="">Remember Me<br>
                     <input type="submit" value="Login" class="btn btn-primaty btn-block"  [disabled]="loginForm.invalid">
                 </form>
                 <br>
