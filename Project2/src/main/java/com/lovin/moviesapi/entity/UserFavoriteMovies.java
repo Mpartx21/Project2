@@ -5,7 +5,9 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Data
+@ToString(
+        exclude = "user"
+)
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -24,7 +26,7 @@ public class UserFavoriteMovies {
             strategy = GenerationType.SEQUENCE,
             generator = "movie_sequence"
     )
-    private Long favMovieId;
+    private long favMovieId;
 
     private String movieId;
 
