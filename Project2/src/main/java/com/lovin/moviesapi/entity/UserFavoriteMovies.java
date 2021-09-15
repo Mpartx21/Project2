@@ -1,9 +1,6 @@
 package com.lovin.moviesapi.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -15,6 +12,7 @@ import javax.persistence.*;
 @Table(
         name = "fav_movies"
 )
+@ToString(exclude = "user")
 public class UserFavoriteMovies {
     @Id
     @SequenceGenerator(
@@ -32,7 +30,7 @@ public class UserFavoriteMovies {
 
     @OneToOne(
             cascade = CascadeType.ALL,
-            fetch = FetchType.EAGER
+            fetch = FetchType.LAZY
     )
     @JoinColumn(
             name = "user_id",
