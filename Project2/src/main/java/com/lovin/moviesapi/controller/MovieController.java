@@ -30,13 +30,6 @@ public class MovieController {
 
     @GetMapping("/movies/{id}")
     public void getMovieById(@PathVariable("id") long movieId) throws IOException, InterruptedException {
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://movie-database-imdb-alternative.p.rapidapi.com/?i={id}&r=json"))
-                .header("x-rapidapi-host", "movie-database-imdb-alternative.p.rapidapi.com")
-                .header("x-rapidapi-key", "924b762eb3mshcd6bc8186d91536p174a5cjsn723c18698e73")
-                .method("GET", HttpRequest.BodyPublishers.noBody())
-                .build();
-        HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());
+        System.out.println("Something goes here");
     }
 }
