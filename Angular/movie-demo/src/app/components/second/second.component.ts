@@ -1,25 +1,42 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user/user.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-second',
   templateUrl: './second.component.html',
   styleUrls: ['./second.component.css']
 })
+
 export class SecondComponent implements OnInit {
 
   public message = "";
 
-  constructor(private userService:UserService) { }
+  // convenience getter for easy access to form fields
+
+
+
+  constructor(
+    private userService:UserService,
+    private router:Router,
+    private route: ActivatedRoute
+    ){}  
 
   ngOnInit(): void {
+ 
   }
 
-  onLogin(email:any,password:any){
-    this.userService.getUserByCredentials(email,password)
+  onLogin(login:NgForm){
+if(login.invalid){
+return
+}
+
+    this.userService.getUserByCredentials(JSON.stringify(login.))
     .subscribe((response)=>{
       localStorage.setItem('user',JSON.stringify(response));
-      this.message = 'Login successfully';
+     const returnUrl = this.route.snapshot.queryParams['returnUrl']||'/';
+     this.router.navigateByUrl(returnUrl);
     },(error)=>{
       console.log(error.message);
     })} 
