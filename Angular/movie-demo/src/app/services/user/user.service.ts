@@ -1,15 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { User } from 'src/app/models/user/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  private apiServerUrl = '';
+  private apiServerUrl = 'http://localhost:8091';
 
-  constructor(private http:HttpClient) { }
+
+  constructor(private http:HttpClient) { 
+
+  }    
 
   public getUsers():Observable<User[]>{
     return this.http.get<User[]>(`${this.apiServerUrl}/users`);
@@ -32,7 +35,7 @@ export class UserService {
   }
 
   public getUserByCredentials(email:string,password:string): Observable<User>{
-    return this.http.get<User>(`${this.apiServerUrl}/users/${email}/${password}`);
+    return this.http.get<User>(`${this.apiServerUrl}/users/${email}/${password}`)
   }
 
 }
