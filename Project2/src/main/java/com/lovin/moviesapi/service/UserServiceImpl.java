@@ -1,8 +1,11 @@
 package com.lovin.moviesapi.service;
 
 import com.lovin.moviesapi.entity.User;
+import com.lovin.moviesapi.entity.UserFavoriteMovies;
+import com.lovin.moviesapi.repository.FavMovieRepository;
 import com.lovin.moviesapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,8 +17,15 @@ public class UserServiceImpl implements UserService{
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private FavMovieRepository movieRepository;
+
     @Override
     public User saveUser(User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(user);
     }
 
@@ -53,5 +63,21 @@ public class UserServiceImpl implements UserService{
         return userRepository.getUserByEmailAndPassword(email,password);
     }
 
+    @Override
+    public void addMovie(long userId, String movieId) {
 
+    }
+
+//    @Override
+//    public void addMovie(Long userId, String movieId) {
+//        Optional<User> user = userRepository.findById(userId);
+//        if(user.isEmpty()){
+//            System.out.println("this user does not exist");
+//        }
+//        user.get();
+//        UserFavoriteMovies movieDB = UserFavoriteMovies.builder()
+//                .movieId(movieId)
+////                .user(user)
+//                .build();
+//    }
 }
