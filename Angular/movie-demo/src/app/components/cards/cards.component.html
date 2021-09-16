@@ -1,15 +1,20 @@
-<div class="container">
+<div class="container mx-auto mt-4">
     <br>
     <h2 class="text-center">Entertainment</h2>
     <br>
-    <div class="row">
+    <div class="row-center">
         <div class="card col-sm-3" *ngFor="let movie of movies">
             <img class="card-img-top" src="{{ movie.Poster}}" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title card-text text-center">{{movie.Title}}</h5>
-                <p class="card-text text-center">Release Year: {{movie.Year}}</p>
-                <div class="text-center">
-                    <button class=" btn btn-dark text-center">More Info</button>
+                <h6 class="card-subtitle mb-2 text-muted">{{movie.Year}}</h6>
+        <p class="card-text">{{ movie.Title }} is a {{ movie.Type }} that was released in {{ movie.Year }}</p>
+        <a href="#" class="btn "><i class="fab fa-github"></i> Favorites</a>
+        <a 
+      routerLink="/movie-detail" 
+      [queryParams]="{ movieId: movie.imdbID }" 
+      class="btn btn-primary">
+			Learn More
+		</a>
                     <button class=" btn btn-dark text-center">Add to Favorites</button>
                 </div>
             </div>
