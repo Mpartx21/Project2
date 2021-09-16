@@ -8,9 +8,6 @@ import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
-import { MovieSearchComponent } from './components/movie-search/movie-search.component';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,15 +16,12 @@ import { FormsModule } from '@angular/forms';
     SecondComponent,
     NotfoundComponent,
     ChildComponent,
-    AboutComponent,
-    MovieDetailsComponent,
-    MovieSearchComponent
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    FormsModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

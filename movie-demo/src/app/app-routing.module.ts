@@ -5,13 +5,18 @@ import { AboutComponent } from './components/about/about.component';
 import { SecondComponent } from './components/second/second.component';
 import { ChildComponent } from './components/child/child.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
-import { MovieSearchComponent } from './components/movie-search/movie-search.component';
-import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+
 
 const routes: Routes = [
-  { path: "", component: MovieSearchComponent },
-  { path: "movie-detail", component: MovieDetailsComponent },
-  { path: "**", redirectTo: "/", pathMatch: "full" }
+  { path: 'home', component: HomeComponent, children: [
+    { path: 'about', component: AboutComponent }
+  ] },
+  { path: 'second', children: [
+    { path: '', component: SecondComponent, },
+    { path: 'child', component: ChildComponent }
+  ] },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: NotfoundComponent }
 ];
 
 @NgModule({

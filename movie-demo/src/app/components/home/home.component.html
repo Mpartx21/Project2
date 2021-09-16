@@ -1,42 +1,19 @@
+<h1>Hey</h1>
+<a routerLink="about">About</a>
 
 
 
-
-<!--<div class="container">
+<div class="container">
     <br>
-    
+    <h4 class="text-center">Selection</h4>
     <br>
-   <div class="row-center">
-    <div class="card col-sm-12" >
+   <div class="row">
+    <div class="card col-sm-3"  *ngFor="let movie of movies">
         <img src="{{ movie.Poster}}">  
         <div class="card-body">
-          <h5 class="card-title">{{ movie.Title}}
-            <span class="badge badge-primary">{{ movie.Type }}</span></h5>
-            </div>
-            <p class="card-text">
-              {{ movie.Title }} is a {{ movie.Type }} that was released in {{ movie.Year }}
-            </p>
+          <h5 class="card-text text-center">{{movie.Title}}</h5>
           <button class="btn btn-primary">Select</button>
         </div>
       </div>
-    </div> -->
+    </div>
   
-    <div class="container mx-auto mt-4">
-      <div class="row-center">
-        <div class="col-md-4">
-          <div class="card" style="width: 18rem;">
-      <img src="{{movie.Poster}}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">{{movie.Title}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{movie.Year}}</h6>
-        <p class="card-text">{{ movie.Title }} is a {{ movie.Type }} that was released in {{ movie.Year }}</p>
-        <a href="#" class="btn "><i class="fab fa-github"></i> Favorites</a>
-        <a 
-      routerLink="/movie-detail" 
-      [queryParams]="{ movieId: movie.imdbID }" 
-      class="btn btn-primary">
-			Learn More
-		</a>
-      </div>
-      </div>
-        </div> 
