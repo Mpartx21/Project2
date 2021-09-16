@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieDetail, Movie } from 'src/app/movie';
+import { MovieDetail, Movie } from 'src/app/models/movie/movie';
 import { ActivatedRoute } from '@angular/router';
-import { DataService } from 'src/app/services/data.service';
+import { DataService } from 'src/app/services/data/data.service';
 import { Observable } from 'rxjs';
 import { map, switchMap } from "rxjs/operators";
 
