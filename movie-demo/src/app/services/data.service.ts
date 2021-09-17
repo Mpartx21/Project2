@@ -18,5 +18,10 @@ export class DataService {
   
   searchMovie(name: string) {
     return this.httpClient.get<any>(`${this.apiURL}&s=${name}`);
+
+  }
+
+  movieDetails(imdbId: string){
+    return this.httpClient.get<any>(`${this.apiURL}&i=${imdbId}&plot=full`);
   }
 }
