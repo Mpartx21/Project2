@@ -1,0 +1,18 @@
+<div class="container">
+    <br>
+    
+    <br>
+   <div class="row">
+    <div class="card col-sm-12" *ngFor= "let popmovie of popularMovies" >
+        <img src="{{ popmovie.poster_path}}">  
+        <div class="card-body">
+          <h5 class="card-title">{{ popmovie.title}}
+            <span class="badge badge-primary">{{ popmovie.release_date }}</span></h5>
+            </div>
+            <p class="card-text">
+              {{ popmovie.overview }}
+            </p>
+          <button class="btn btn-primary">Select</button>
+        </div>
+      </div>
+    </div>
