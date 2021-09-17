@@ -39,8 +39,8 @@ public class UserController {
         return service.updateUser(userId, user);
     }
 
-    @PostMapping("/users/login")
-    public User getUserByCredentials(@RequestBody String email,@RequestBody String password){
+    @GetMapping("/users/{email}/{password}")
+    public User getUserByCredentials(@PathVariable("email") String email,@PathVariable("password") String password){
         return service.getUserByemailandPword(email,password);
     }
 

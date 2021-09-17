@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user/user.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-second',
@@ -10,6 +9,8 @@ import { NgForm } from '@angular/forms';
 })
 
 export class SecondComponent implements OnInit {
+  email!: string;
+  password!: string;
 
   public message = "";
 
@@ -27,18 +28,16 @@ export class SecondComponent implements OnInit {
  
   }
 
-  onLogin(login:NgForm){
-if(login.invalid){
-return
-}
+  onLogin(){
 
-    // this.userService.getUserByCredentials( , )
-    // .subscribe((response)=>{
-    //   localStorage.setItem('user',JSON.stringify(response));
-    //  const returnUrl = this.route.snapshot.queryParams['returnUrl']||'/';
-    //  this.router.navigateByUrl(returnUrl);
-    // },(error)=>{
-    //   console.log(error.message);
-    // })} }
-}
-}
+
+    this.userService.getUserByCredentials(this.email,this.password )
+    .subscribe((response)=>{
+      localStorage.setItem('user',JSON.stringify(response));
+     const returnUrl = this.route.snapshot.queryParams['returnUrl']||'/';
+     this.router.navigateByUrl(returnUrl);
+    },(error)=>{
+      console.log(error.message);
+    })} }
+
+

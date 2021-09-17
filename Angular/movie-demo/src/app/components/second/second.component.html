@@ -7,12 +7,12 @@
                     {{message}}
                 </div>
                 <h2>Login</h2>
-                <form #login="ngForm" (ngSubmit)="onLogin(login)">
+                <form >
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" 
+                        <input type="text" class="form-control" 
                         [class.is-invalid]="email.invalid && email.touched"
-                        name="email" ngModel required/>
+                        name="email" [(ngModel)]="email" required/>
                     </div>
                     <div *ngIf="!email?.valid && (email?.dirty || email?.touched)">
                         <small class="text-danger" *ngIf="email.errors?.required">*Email is required</small>
@@ -22,9 +22,9 @@
                         <label for="password">Password</label>
                         <input type="password" class="form-control" 
                             [class.is-invalid]="password.invalid && password.touched"
-                            name="password" [(ngModel)]="password" ngModel required/>
+                            name="password" [(ngModel)]="password"  required/>
                     </div>
-                    <input type="submit" value="Login" class="btn btn-primaty btn-block"  [disabled]="loginForm.invalid">
+                    <button (click)=onLogin() type="submit" value="Login" class="btn btn-primaty btn-block"  [disabled]="loginForm.invalid">Login</button>
                 <br>
                 <div style="text-align: right;">
                     <a routerLink="register">New User? Click Here</a>
