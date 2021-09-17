@@ -13,6 +13,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CardsComponent } from './components/cards/cards.component';
 import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
     AboutComponent,
     RegisterComponent,
     NavbarComponent,
-    CardsComponent
+    CardsComponent,
+    MovieDetailsComponent,
   ],
   imports: [
     BrowserModule,

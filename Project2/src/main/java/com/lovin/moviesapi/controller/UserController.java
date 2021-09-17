@@ -40,7 +40,7 @@ public class UserController {
     }
 
     @GetMapping("/users/{email}/{password}")
-    public User getUserByCredentials(@PathVariable String email,@PathVariable String password){
+    public User getUserByCredentials(@PathVariable("email") String email,@PathVariable("password") String password){
         return service.getUserByemailandPword(email,password);
     }
 
