@@ -15,8 +15,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     List<User> findByFirstNameContaining(String name);
 
-    User findByUsername(String username);
-
 //    //JPQL
     @Query("select u from User u where u.userId=?1")
     User getUserById(long userId);
