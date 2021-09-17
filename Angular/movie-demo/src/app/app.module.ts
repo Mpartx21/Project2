@@ -14,7 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CardsComponent } from './components/cards/cards.component';
 import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
-
+import { MovieSearchComponent } from './components/movie-search/movie-search.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +28,7 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
     NavbarComponent,
     CardsComponent,
     MovieDetailsComponent,
+    MovieSearchComponent
   ],
   imports: [
     BrowserModule,

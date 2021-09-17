@@ -34,8 +34,7 @@ export class SecondComponent implements OnInit {
     this.userService.getUserByCredentials(this.email,this.password )
     .subscribe((response)=>{
       localStorage.setItem('user',JSON.stringify(response));
-     const returnUrl = this.route.snapshot.queryParams['returnUrl']||'/';
-     this.router.navigateByUrl(returnUrl);
+     this.router.navigate(['/']);
     },(error)=>{
       console.log(error.message);
     })} }
