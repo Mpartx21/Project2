@@ -15,13 +15,14 @@ class MoviesApiApplicationTests {
 	@Test
 	public void saveUser(){
 		User user = User.builder()
-				.firstName("Mary")
-				.lastName("Jane")
-				.password("1234")
-				.userName("MJ23")
-				.userEmail("GOAT@gmail.com")
+				.firstName("Ron")
+				.lastName("Burgundy")
+				.password("password")
+				.userName("sanDiego")
+				.userEmail("NewsTeam@gmail.com")
 				.build();
 		userRepository.save(user);
+		System.out.println(user);
 	}
 
 	@Test
