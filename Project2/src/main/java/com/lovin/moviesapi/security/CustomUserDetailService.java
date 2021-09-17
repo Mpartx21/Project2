@@ -19,6 +19,7 @@ public class CustomUserDetailService implements UserDetailsService {
         if(user == null){
             throw new UsernameNotFoundException(username);
         }
+        //some reason the User class from spring security wont pick up withUsername?
         UserDetails userDetails  = User.with
         return userDetails;
     }
