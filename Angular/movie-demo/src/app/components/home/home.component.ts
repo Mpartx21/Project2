@@ -16,5 +16,9 @@ export class HomeComponent {
 
 
 
+//  ngOnInit(): void {
+//    this.dataService.searchMovie("bat").subscribe(result => {
+//      this.movie = result.Search;
+//    });  }
 
 }
