@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Movie } from 'src/app/models/movie/movie';
+import { Component, Input, OnInit } from '@angular/core';
+import { Movie,MovieDetail } from 'src/app/models/movie/movie';
 import { DataService } from 'src/app/services/data/data.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { DataService } from 'src/app/services/data/data.service';
 })
 export class CardsComponent implements OnInit {
 
+  @Input() movieDetail!: MovieDetail;
   constructor(private data:DataService) { }
 
   movies:Movie[]=[];
