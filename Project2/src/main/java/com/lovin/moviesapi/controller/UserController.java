@@ -41,7 +41,7 @@ public class UserController {
         return service.updateUser(userId, user);
     }
 
-    @GetMapping("/users")
+    @GetMapping("/login")
     public User getUserByCredentials(@RequestBody String email, @RequestBody String password){
         return service.getUserByemailandPword(email,password);
     }
