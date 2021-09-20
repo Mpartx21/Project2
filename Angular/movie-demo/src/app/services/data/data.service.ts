@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Movie, PopularMovie } from '../movie';
+import { Movie } from 'src/app/models/movie/movie';
+import { PopularMovie } from 'src/app/models/movie/movie';
 import { Observable } from 'rxjs';
 
 export type ApiResponse = {
