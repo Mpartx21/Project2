@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from 'src/app/services/user/user.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -9,14 +9,14 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 
 export class SecondComponent implements OnInit {
-  email!: string;
-  password!: string;
+  // email!: string;
+  // password!: string;
 
-  public message = "";
+  // public message = "";
 
   // convenience getter for easy access to form fields
 
-
+  @Input() userData = { email: '', password: '' };
 
   constructor(
     private userService:UserService,
@@ -28,15 +28,26 @@ export class SecondComponent implements OnInit {
  
   }
 
-  onLogin(){
+  //this sends info but returns a 500 error
+  onLogin(): void {
+    this.userService.getUserByCredentials(this.userData).subscribe((result) => {
+
+    })
+  }
+
+  // onLogin(){
 
 
-    this.userService.getUserByCredentials(this.email,this.password )
-    .subscribe((response)=>{
-      localStorage.setItem('user',JSON.stringify(response));
-     this.router.navigate(['/']);
-    },(error)=>{
-      console.log(error.message);
-    })} }
+  //   this.userService.getUserByCredentials(this.email,this.password )
+  //   .subscribe((response)=>{
+  //     localStorage.setItem('user',JSON.stringify(response));
+  //    this.router.navigate(['/']);
+  //   },(error)=>{
+  //     console.log(error.message);
+  //   })
+  
+  // } 
+  
+  }
 
 
