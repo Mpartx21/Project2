@@ -5,13 +5,17 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SecondComponent } from './components/second/second.component';
+import { HomeComponent } from './components/home/home.component';
+import { MovieHomeComponent } from './components/movie-home/movie-home.component';
 
 
 const routes: Routes = [
   { path: "", component: MovieSearchComponent },
+  // { path: "", component: HomeComponent },
   { path: "movie-detail", component: MovieDetailsComponent },
   { path: "register", component: RegisterComponent},
   { path: "login", component: SecondComponent},
+  { path: "movie-detail", component: MovieDetailsComponent},
   { path: "**", redirectTo: "/", pathMatch: "full" }
 ];
 
