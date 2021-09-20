@@ -32,7 +32,6 @@ class FavMovieRepositoryTest {
         repository.save(userFavoriteMovies);
     }
 
-//    Will run into a stack overflow if ran
     @Test
     public void displayAllMovies(){
         List<UserFavoriteMovies> userFavoriteMovies = repository.findAll();

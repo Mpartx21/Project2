@@ -4,29 +4,29 @@
     <form >
         <div class="form-group">
             <label for="">First Name</label>
-            <input type="text" 000000000000000000000000000000000class="form-control" name="firstName" required>
+            <input type="text" class="form-control" name="firstName" [(ngModel)]="userData.firstName" required >
+            <small class="text-danger">This is required field</small>
+        </div>
+        <div class="form-group">
+            <label for="">Last Name</label>
+            <input type="text" class="form-control" name="lastName" required [(ngModel)]="userData.lastName">
             <small class="text-danger">This is required field</small>
         </div>
         <div class="form-group">
             <label for="">Email</label>
-            <input type="text" class="form-control" name="email">
+            <input type="text" class="form-control" name="userEmail" [(ngModel)]="userData.userEmail">
         </div>
-
         <div class="form-group">
-            <label for="">Mobile</label>
-            <input type="text" class="form-control" name="mobile" required pattern="^\d{10}$">
-             <div >
-                <small class="text-danger" >Mobile number is required</small>
-                <small class="text-danger" >Mobile number must be 10 digit</small>
-             </div>
+            <label for="">Username</label>
+            <input type="text" class="form-control" [(ngModel)]="userData.userName">
         </div>
 
         <div class="form-group">
             <label for="">Password</label>            
-            <input type="text" class="form-control" name="password">
+            <input type="text" class="form-control" name="password" [(ngModel)]="userData.password">
         </div>
 
        
-        <input type="submit"  value="Register" class="btn btn-primary">
+        <input type="submit"  value="Register" class="btn btn-primary" (click)=registeredUser()>
     </form>
 </div>

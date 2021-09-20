@@ -5,15 +5,13 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@ToString(
-        exclude = "user"
-)
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Table(
         name = "fav_movies"
 )
+@ToString(exclude = "user")
 public class UserFavoriteMovies {
     @Id
     @SequenceGenerator(
@@ -31,8 +29,7 @@ public class UserFavoriteMovies {
 
     @OneToOne(
             cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY,
-            optional=true
+            fetch = FetchType.LAZY
     )
     @JoinColumn(
             name = "user_id",

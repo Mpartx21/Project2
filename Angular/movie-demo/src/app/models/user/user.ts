@@ -7,6 +7,6 @@ export interface User {
     lastName:string;
     userName:string;
     userEmail:string;
-    userFavoriteMovies:userFavoriteMovies;
+    userFavoriteMovies:string;
     
 }
