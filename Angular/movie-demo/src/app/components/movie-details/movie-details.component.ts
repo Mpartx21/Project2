@@ -1,14 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< Updated upstream
 
 
 
 import { ActivatedRoute } from '@angular/router';
 
-=======
-import { MovieDetail, Movie } from 'src/app/models/movie/movie';
-import { ActivatedRoute } from '@angular/router';
->>>>>>> Stashed changes
 import { DataService } from 'src/app/services/data/data.service';
 import { Observable } from 'rxjs';
 import { map, switchMap } from "rxjs/operators";
