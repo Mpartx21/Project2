@@ -9,29 +9,29 @@ import java.util.Optional;
 
 @Service
 public class MovieServiceImpl implements MovieService{
-
-    @Autowired
-    private FavMovieRepository repository;
-
-    @Override
-    public UserFavoriteMovies saveMovie(UserFavoriteMovies userFavoriteMovies) {
-        return repository.save(userFavoriteMovies);
-    }
-
-    @Override
-    public UserFavoriteMovies getMovieById(long movieId) {
-        Optional<UserFavoriteMovies> userFavoriteMovies = repository.findById(movieId);
-        if (userFavoriteMovies.isEmpty()){
-            System.out.println("There are no movie records");
-        }
-
-        return userFavoriteMovies.get();
-    }
-
-    @Override
-    public UserFavoriteMovies deleteMovie(long movieId) {
-        UserFavoriteMovies movieDB = repository.findById(movieId).get();
-        repository.delete(movieDB);
-        return movieDB;
-    }
+//
+//    @Autowired
+//    private FavMovieRepository repository;
+//
+//    @Override
+//    public UserFavoriteMovies saveMovie(UserFavoriteMovies userFavoriteMovies) {
+//        return repository.save(userFavoriteMovies);
+//    }
+//
+//    @Override
+//    public UserFavoriteMovies getMovieById(long movieId) {
+//        Optional<UserFavoriteMovies> userFavoriteMovies = repository.findById(movieId);
+//        if (userFavoriteMovies.isEmpty()){
+//            System.out.println("There are no movie records");
+//        }
+//
+//        return userFavoriteMovies.get();
+//    }
+//
+//    @Override
+//    public UserFavoriteMovies deleteMovie(long movieId) {
+//        UserFavoriteMovies movieDB = repository.findById(movieId).get();
+//        repository.delete(movieDB);
+//        return movieDB;
+//    }
 }

@@ -8,12 +8,14 @@ import { SecondComponent } from './components/second/second.component';
 import { HomeComponent } from './components/home/home.component';
 import { MovieHomeComponent } from './components/movie-home/movie-home.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { ProfileViewComponent } from './components/profile-view/profile-view.component';
 
 
 const routes: Routes = [
   { path: "", component: MovieSearchComponent},
   { path: "home", component: CardsComponent },
   { path: "movie-detail", component: MovieDetailsComponent },
+  { path: "profile", component: ProfileViewComponent},
   { path: "register", component: RegisterComponent},
   { path: "login", component: SecondComponent},
   { path: "movie-detail", component: MovieDetailsComponent},

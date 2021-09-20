@@ -23,6 +23,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SecondComponent } from './components/second/second.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { ProfileViewComponent } from './components/profile-view/profile-view.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CardsComponent } from './components/cards/cards.component';
     NavbarComponent, 
     RegisterComponent,
     SecondComponent,
-    CardsComponent
+    CardsComponent,
+    ProfileViewComponent
     
   ],
   imports: [
