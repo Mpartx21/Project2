@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< Updated upstream
 
 import { Movie } from 'src/app/models/movie/movie';
 
+=======
+import { Observable } from 'rxjs';
+import { Movie } from 'src/app/models/movie/movie';
+>>>>>>> Stashed changes
 import { DataService } from 'src/app/services/data/data.service';
 
 @Component({

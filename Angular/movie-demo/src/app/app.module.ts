@@ -19,7 +19,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     NotfoundComponent,
     MovieSearchComponent,
     MovieDetailsComponent,
-    MovieHomeComponent
+    MovieHomeComponent,
+    NavbarComponent
     
   ],
   imports: [
