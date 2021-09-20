@@ -16,9 +16,9 @@ export class MovieHomeComponent implements OnInit {
   movies: PopularMovie[] = [];
 
   ngOnInit(): void {
-    this.dataService.getpopularMovies().subscribe(result => {
-      this.movies = result.results
-    });
+   this.dataService.getpopularMovies().subscribe((result)=> {
+      this.movies = result.results;
+    })
   }
 
 }
