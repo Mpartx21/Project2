@@ -20,7 +20,7 @@ public class MovieController {
 
     @PostMapping("/movies")
     public UserFavoriteMovies saveMovie(@RequestBody UserFavoriteMovies userFavoriteMovies) {
-        return service.saveMovie(userFavoriteMovies);
+        return null;
     }
 
 //    @GetMapping("/movies/{id}")

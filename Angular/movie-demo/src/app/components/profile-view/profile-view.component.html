@@ -1,0 +1,30 @@
+
+<div>
+    <mat-card>
+        <mat-dialog-content>
+            <mat-card-title>
+                {{user.firstName}}
+            </mat-card-title>
+            <mat-card-subtitle>
+                <!-- Email: {{user.Email}} -->
+            </mat-card-subtitle>
+            <button mat-button  color="primary">
+                Update Info
+            </button>
+            <!-- <button mat-button color="warn" (click)="removeUser(user)">
+                Deactivate account
+            </button> -->
+        </mat-dialog-content>
+    </mat-card>
+    <!-- <div class="movie-card">
+        <mat-card *ngFor="let favorite of favorites" style="flex: 1 1 auto">
+            <mat-card-title>
+                {{favorite.Title}}
+            </mat-card-title>
+            <img mat-card-image src={{favorite.ImagePath}} alt={{favorite.Title}}>
+            <button mat-button (click)="removeFavorite(favorite._id)" color="warn">
+                Remove from favorites
+            </button>
+        </mat-card>
+    </div> -->
+</div>
