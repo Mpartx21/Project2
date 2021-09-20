@@ -37,5 +37,4 @@ export class UserService {
   public getUserByCredentials(email:string,password:string): Observable<User>{
     return this.http.get<User>(`${this.apiServerUrl}/users/${email}/${password}`)
   }
-
 }
