@@ -18,8 +18,9 @@ export class UserService {
     return this.http.get<User[]>(`${this.apiServerUrl}/users`);
   }
 
-  public saveUser(user:User): Observable<User>{
-    return this.http.post<User>(`${this.apiServerUrl}/users`,user);
+  public saveUser(userData: any): Observable<any>{
+    console.log(userData);
+    return this.http.post(`${this.apiServerUrl}/users`, userData);
   }
 
   public getUserById(userId:number): Observable<User>{
