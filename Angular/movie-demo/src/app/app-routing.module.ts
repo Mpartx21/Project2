@@ -7,11 +7,12 @@ import { RegisterComponent } from './components/register/register.component';
 import { SecondComponent } from './components/second/second.component';
 import { HomeComponent } from './components/home/home.component';
 import { MovieHomeComponent } from './components/movie-home/movie-home.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 
 const routes: Routes = [
-  { path: "", component: MovieSearchComponent, children: [
-    {path: 'popular', component: MovieHomeComponent}]},
+  { path: "", component: MovieSearchComponent},
+  { path: "home", component: CardsComponent },
   { path: "movie-detail", component: MovieDetailsComponent },
   { path: "register", component: RegisterComponent},
   { path: "login", component: SecondComponent},

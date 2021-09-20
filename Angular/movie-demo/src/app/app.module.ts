@@ -22,6 +22,7 @@ import { MovieHomeComponent } from './components/movie-home/movie-home.component
 import { RegisterComponent } from './components/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SecondComponent } from './components/second/second.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SecondComponent } from './components/second/second.component';
     MovieHomeComponent,
     NavbarComponent, 
     RegisterComponent,
-    SecondComponent
+    SecondComponent,
+    CardsComponent
     
   ],
   imports: [
