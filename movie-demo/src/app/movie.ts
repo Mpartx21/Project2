@@ -1,12 +1,18 @@
-export interface Movie {
-    Poster: string ;
+export interface Rating {
+    Source: string;
+    Value: string;
+  }
+  
+  export interface Movie {
     Title: string;
-    Type: string;
     Year: string;
     imdbID: string;
-}
-
-export interface MovieDetail {
+    Type: string;
+    Poster: string;
+    Genre: string;
+  }
+  
+  export interface MovieDetail {
     Title: string;
     Year: string;
     Rated: string;
@@ -32,19 +38,6 @@ export interface MovieDetail {
     Production: string;
     Website: string;
     Response: string;
+    similarMovies: string;
   }
-
-  export interface Rating {
-    Source: string;
-    Value: string;
-  }
-
-  export interface PopularMovie{
-    id: string;
-    original_title: string;
-    overview: string;
-    poster_path: string;
-    release_date: string;
-    title: string;
-
-  }
+  

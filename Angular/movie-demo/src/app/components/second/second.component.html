@@ -1,30 +1,34 @@
 <div class="container">
-    <div  class="" role="alert">
-    
-    </div>
     <div class="row">
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
             <div class="wrapper">
-                <h2>Login</h2>
-                <form >
-                    <div class="form-group">
-                        <label for="">Password</label>
-                        <input type="text" class="form-control" name="password" ngModel />
-                    </div>
-                    <div class="form-group">
-                        <label for="">Email</label>
-                        <input type="password" class="form-control" name="email" ngModel />
-                    </div>
-                    <input type="checkbox" name="" id="">Remember Me<br>
-                    <input type="submit" value="Login" class="btn btn-primaty btn-blcok">
-                </form>
-                <br>
-                <div style="text-align: right;">
-                    <a routerLink="register">New User? Click Here</a>
+                <div *ngIf="message" class="alert alert-success" role="alert">
+                    {{message}}
                 </div>
+                <h2>Login</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" name="email" [(ngModel)]="email" required />
+                    </div>
+                    <!-- <div *ngIf="!email?.valid && (email?.dirty || email?.touched)">
+                        <small class="text-danger" *ngIf="email.errors?.required">*Email is required</small>
+                        <small class="text-danger" *ngIf="email.errors?.pattern">*Email is not valid</small>
+                    </div> -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" [(ngModel)]="password" required />
+                    </div>
+                    <button (click)=onLogin() type="submit" value="Login" 
+                    class="btn btn-primaty btn-block">Login</button>
+                    <br>
+                    <div style="text-align: right;">
+                        <a routerLink="register">New User? Click Here</a>
+                    </div>
+                </form>
             </div>
-            <div class="col-lg-3"></div>
         </div>
+        <div class="col-lg-3"></div>
     </div>
 </div>
