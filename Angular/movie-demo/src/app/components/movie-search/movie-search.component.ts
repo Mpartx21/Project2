@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Movie } from 'src/app/movie';
+import { Movie } from 'src/app/models/movie';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -11,18 +10,18 @@ import { DataService } from 'src/app/services/data.service';
 export class MovieSearchComponent {
 query!: string;
 movies!: Movie[];
-  
+
 
   constructor(private data: DataService) {
-   
+
    }
    getSearchResults() {
     this.data.searchMovie(this.query).subscribe(result => {
       this.movies = result.Search;
-      
+
     });
   }
 
-  
+
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieDetail, Movie } from 'src/app/movie';
+import { MovieDetail, Movie } from 'src/app/models/movie';
 import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/services/data.service';
 import { Observable } from 'rxjs';
@@ -15,14 +15,14 @@ export class MovieDetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private data: DataService) { }
 
-  
+
 
   ngOnInit(): void {
 
     this.movieDetails = this.route.queryParams.pipe(
       map(queryParams => queryParams["movieId"]),
       switchMap(imdbId => this.data.getMovieDetails(imdbId)))
-    
+
    /* this.movieDetails = this.route.queryParams.pipe(
       map(queryParams => queryParams["movieId"]),
       switchMap(imdbId => this.data.getMovieDetails(imdbId)),
@@ -40,5 +40,5 @@ export class MovieDetailsComponent implements OnInit {
         )
       )
     ); */
-  } 
+  }
 }

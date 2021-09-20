@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
-import { PopularMovie } from 'src/app/movie';
+import { PopularMovie } from 'src/app/models/movie';
 import { Observable } from 'rxjs';
 
 @Component({
