@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user/user.service';
+import { MatDialogRef } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-register',
@@ -14,20 +16,20 @@ export class RegisterComponent implements OnInit {
     lastName: '',
     userEmail: '',
     userName: '',
-    password: '',
-    userId: NaN,
-    userFavoriteMovies: ''
+    password: ''
   };
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(
+    private userService: UserService, 
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
   }
 
   registeredUser(): void {
     this.userService.saveUser(this.userData).subscribe((result) => {
-      alert("lets see what happens");
-
+     console.log(this.userData);
     })
   }
 
