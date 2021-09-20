@@ -33,3 +33,9 @@
     box-shadow: #222 1px 0 10px;
     text-decoration: underline;
   }
+
+  img {
+    float: left;
+    
+    object-fit: cover;
+}
