@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent {
   constructor(private dataService: DataService) { }
   @Input() movie!: Movie;
   @Input() movieDetail!: MovieDetail;
@@ -16,9 +16,9 @@ export class HomeComponent implements OnInit{
 
 
 
- ngOnInit(): void {
-   this.dataService.searchMovie("bat").subscribe(result => {
-     this.movie = result.Search;
-   });  }
+//  ngOnInit(): void {
+//    this.dataService.searchMovie("bat").subscribe(result => {
+//      this.movie = result.Search;
+//    });  }
 
 }
