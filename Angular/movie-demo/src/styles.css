@@ -2,4 +2,6 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: rgb(60,60,60);
+    background: radial-gradient(circle, rgba(60,60,60,1) 0%, rgba(60,60,60,1) 9%, rgb(31, 31, 0) 97%);}
