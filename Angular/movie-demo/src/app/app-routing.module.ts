@@ -10,8 +10,8 @@ import { MovieHomeComponent } from './components/movie-home/movie-home.component
 
 
 const routes: Routes = [
-  { path: "", component: MovieSearchComponent },
-  // { path: "", component: HomeComponent },
+  { path: "", component: MovieSearchComponent, children: [
+    {path: 'popular', component: MovieHomeComponent}]},
   { path: "movie-detail", component: MovieDetailsComponent },
   { path: "register", component: RegisterComponent},
   { path: "login", component: SecondComponent},

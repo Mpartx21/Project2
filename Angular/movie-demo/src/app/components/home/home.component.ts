@@ -9,13 +9,15 @@ import { Observable } from 'rxjs';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent{
-  constructor( ){}
+  constructor(private dataService: DataService) { }
   @Input() movie!: Movie;
   @Input() movieDetail!: MovieDetail;
 
 
 
+ngOnInit():void{
 
+}
 
 
  // ngOnInit(): void {

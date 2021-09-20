@@ -18,7 +18,7 @@ export class MovieHomeComponent implements OnInit {
 
   ngOnInit(): void {
    this.dataService.getpopularMovies().subscribe((result)=> {
-      this.popularMovies = result.Data;
+      this.popularMovies = result.results;
     })
   }
 
