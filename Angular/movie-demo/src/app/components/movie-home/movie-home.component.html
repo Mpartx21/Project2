@@ -1,18 +1,15 @@
+
 <div class="container">
   <br>
+  <h4 class="text-center"></h4>
   <br>
-  <div class="row">
-    <div class="card col-sm-12" *ngFor="let popmovie of popularMovies">
-      <img src="{{ popmovie.poster_path}}">
+ <div class="row">
+  <div class="card col-sm-3"  *ngFor="let movie of movies">
+      <img src="{{ movie.poster_path}}">  
       <div class="card-body">
-        <h5 class="card-title">{{ popmovie.title}}
-          <span class="badge badge-primary">{{ popmovie.release_date }}</span>
-        </h5>
+        <h5 class="card-text text-center">{{movie.title}}</h5>
+        <p class="card-text text-center">{{movie.overview}}</p>
+        <button class="btn btn-primary">Learn More</button>
       </div>
-      <p class="card-text">
-        {{ popmovie.overview }}
-      </p>
-      <button class="btn btn-primary">Select</button>
     </div>
   </div>
-</div>

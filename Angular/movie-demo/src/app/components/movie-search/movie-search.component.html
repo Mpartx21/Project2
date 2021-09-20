@@ -9,7 +9,7 @@
         (keyup.enter)="getSearchResults()"
         placeholder="Search..." />
     </div>
-    <button type="button" (click)="getSearchResults()" class="form-control btn btn-primary">Search</button>
+    <button routerLink="/search" type="button" (click)="getSearchResults()" class="form-control btn btn-primary">Search</button>
     <hr>
     <div class="row">
       <app-home 

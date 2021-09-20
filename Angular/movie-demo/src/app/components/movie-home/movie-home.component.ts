@@ -11,16 +11,16 @@ import { Observable } from 'rxjs';
   styleUrls: ['./movie-home.component.css']
 })
 export class MovieHomeComponent implements OnInit {
-
-
   constructor(private dataService: DataService) { }
-  popularMovies!: PopularMovie[];
+
+  movies: PopularMovie[] = [];
 
   ngOnInit(): void {
-   this.dataService.getpopularMovies().subscribe((result)=> {
-      this.popularMovies = result.Data;
-    })
+    this.dataService.getpopularMovies().subscribe(result => {
+      this.movies = result.results
+    });
   }
 
 }
+
 
