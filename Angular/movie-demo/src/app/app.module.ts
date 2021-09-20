@@ -6,11 +6,11 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { MovieSearchComponent } from './components/movie-search/movie-search.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { MovieHomeComponent } from './components/movie-home/movie-home.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
