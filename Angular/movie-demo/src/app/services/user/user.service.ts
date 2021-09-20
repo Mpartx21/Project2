@@ -38,7 +38,7 @@ export class UserService {
   // Gets a 500 error in the web browser 
   public getUserByCredentials(userData: any): Observable<any>{
     console.log(userData);
-    return this.http.post(`${this.apiServerUrl}/users`, userData);
+    return this.http.get(`${this.apiServerUrl}/users`, userData);
   }
 
   // public getUserByCredentials(email:string,password:string): Observable<User>{
