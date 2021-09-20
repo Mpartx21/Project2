@@ -20,6 +20,7 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
 import { MovieHomeComponent } from './components/movie-home/movie-home.component';
 import { RegisterComponent } from './components/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SecondComponent } from './components/second/second.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MovieDetailsComponent,
     MovieHomeComponent,
     NavbarComponent, 
-    RegisterComponent
+    RegisterComponent,
+    SecondComponent
     
   ],
   imports: [

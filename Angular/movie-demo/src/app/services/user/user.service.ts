@@ -35,7 +35,13 @@ export class UserService {
     return this.http.post<User>(`${this.apiServerUrl}/user/${userId}`,user);
   }
 
-  public getUserByCredentials(email:string,password:string): Observable<User>{
-    return this.http.get<User>(`${this.apiServerUrl}/users/${email}/${password}`)
+  // Gets a 500 error in the web browser 
+  public getUserByCredentials(userData: any): Observable<any>{
+    console.log(userData);
+    return this.http.post(`${this.apiServerUrl}/users`, userData);
   }
+
+  // public getUserByCredentials(email:string,password:string): Observable<User>{
+  //   return this.http.get<User>(`${this.apiServerUrl}/users/${email}/${password}`)
+  // }
 }
