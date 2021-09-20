@@ -30,9 +30,13 @@ export class SecondComponent implements OnInit {
 
   //this sends info but returns a 500 error
   onLogin(): void {
-    this.userService.getUserByCredentials(this.userData).subscribe((result) => {
-
-    })
+    this.userService.getUserByCredentials(this.userData)  
+      .subscribe((response)=>{
+          localStorage.setItem('user',JSON.stringify(response));
+         this.router.navigate(['/']);
+        },(error)=>{
+          console.log(error.message);
+        })
   }
 
   // onLogin(){
