@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
     userName: '',
     password: '',
     userId: NaN,
-    userFavoriteMovies: ''
+    userFavoriteMovies:undefined
   };
 
   constructor(private userService: UserService, private router: Router) { }
