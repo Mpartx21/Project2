@@ -7,6 +7,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { SecondComponent } from './components/second/second.component';
 import { HomeComponent } from './components/home/home.component';
 import { MovieHomeComponent } from './components/movie-home/movie-home.component';
+import {ProfilePageComponent} from "./components/profile-page/profile-page.component";
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: "register", component: RegisterComponent},
   { path: "login", component: SecondComponent},
   { path: "movie-detail", component: MovieDetailsComponent},
+  { path: "profile-page", component: ProfilePageComponent},
   { path: "**", redirectTo: "/", pathMatch: "full" }
 ];
 

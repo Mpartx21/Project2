@@ -23,16 +23,16 @@ export class UserService {
     return this.http.post(`${this.apiServerUrl}/users`, userData);
   }
 
-  public getUserById(userId:number): Observable<User>{
-    return this.http.get<User>(`${this.apiServerUrl}/users/${userId}`);
+  public getUserById(Id:any): Observable<User>{
+    return this.http.get<User>(`${this.apiServerUrl}/users/${Id}`);
   }
 
-  public deleteUser(userId:number): Observable<void>{
-    return this.http.delete<void>(`${this.apiServerUrl}/users/${userId}`);
+  public deleteUser(Id:any): Observable<void>{
+    return this.http.delete<void>(`${this.apiServerUrl}/users/${Id}`);
   }
 
-  public updateUserWithId(userId:number,user:User): Observable<User>{
-    return this.http.post<User>(`${this.apiServerUrl}/user/${userId}`,user);
+  public updateUserWithId(Id:any,user:User): Observable<User>{
+    return this.http.post<User>(`${this.apiServerUrl}/user/${Id}`,user);
   }
 
   // Gets a 500 error in the web browser

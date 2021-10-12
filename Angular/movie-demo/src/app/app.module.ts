@@ -22,6 +22,7 @@ import { MovieHomeComponent } from './components/movie-home/movie-home.component
 import { RegisterComponent } from './components/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SecondComponent } from './components/second/second.component';
+import { ProfilePageComponent } from './components/profile-page/profile-page.component';
 
 @NgModule({
   declarations: [
@@ -31,10 +32,11 @@ import { SecondComponent } from './components/second/second.component';
     MovieSearchComponent,
     MovieDetailsComponent,
     MovieHomeComponent,
-    NavbarComponent, 
+    NavbarComponent,
     RegisterComponent,
-    SecondComponent
-    
+    SecondComponent,
+    ProfilePageComponent
+
   ],
   imports: [
     BrowserModule,
@@ -49,8 +51,8 @@ import { SecondComponent } from './components/second/second.component';
     MatCardModule,
     MatInputModule,
     MatToolbarModule
-    
-    
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
