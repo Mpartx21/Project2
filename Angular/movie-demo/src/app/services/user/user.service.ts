@@ -7,12 +7,12 @@ import { User } from 'src/app/models/user/user';
   providedIn: 'root'
 })
 export class UserService {
-  private apiServerUrl = 'http://localhost:8091';
+  private apiServerUrl = 'http://localhost:8080';
 
 
-  constructor(private http:HttpClient) { 
+  constructor(private http:HttpClient) {
 
-  }    
+  }
 
   public getUsers():Observable<User[]>{
     return this.http.get<User[]>(`${this.apiServerUrl}/users`);
@@ -35,7 +35,7 @@ export class UserService {
     return this.http.post<User>(`${this.apiServerUrl}/user/${userId}`,user);
   }
 
-  // Gets a 500 error in the web browser 
+  // Gets a 500 error in the web browser
   public getUserByCredentials(userData: any): Observable<any>{
     console.log(userData);
     return this.http.get(`${this.apiServerUrl}/users`, userData);
