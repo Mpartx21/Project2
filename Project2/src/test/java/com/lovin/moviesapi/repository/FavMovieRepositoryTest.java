@@ -13,31 +13,31 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class FavMovieRepositoryTest {
 
-    @Autowired
-    private FavMovieRepository repository;
-
-    @Test
-   public void SaveFavMovie(){
-        User user = User.builder()
-                .firstName("Charlie")
-                .lastName("Murphy")
-                .userName("couch")
-                .password("rickJames")
-                .userEmail("rj@gmail.com")
-                .build();
-        UserFavoriteMovies userFavoriteMovies = UserFavoriteMovies.builder()
-                .movieId("tt4154796")
-                .user(user)
-                .build();
-        repository.save(userFavoriteMovies);
-    }
-
-    @Test
-    public void displayAllMovies(){
-        List<UserFavoriteMovies> userFavoriteMovies = repository.findAll();
-        System.out.println(userFavoriteMovies);
-    }
-
-
+//    @Autowired
+//    private FavMovieRepository repository;
+//
+//    @Test
+//   public void SaveFavMovie(){
+//        User user = User.builder()
+//                .firstName("Charlie")
+//                .lastName("Murphy")
+//                .userName("couch")
+//                .password("rickJames")
+//                .userEmail("rj@gmail.com")
+//                .build();
+//        UserFavoriteMovies userFavoriteMovies = UserFavoriteMovies.builder()
+//                .movieId("tt4154796")
+//
+//                .build();
+//        repository.save(userFavoriteMovies);
+//    }
+//
+//    @Test
+//    public void displayAllMovies(){
+//        List<UserFavoriteMovies> userFavoriteMovies = repository.findAll();
+//        System.out.println(userFavoriteMovies);
+//    }
+//
+//
 
 }

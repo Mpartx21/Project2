@@ -30,8 +30,8 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public User getUserById(long userId) {
-        Optional<User> user = userRepository.findById(userId);
+    public User getUserById(String Id) {
+        Optional<User> user = userRepository.findById(Id);
         if(user.isEmpty()){
             System.out.println("This user Id does not exist");
         }
@@ -39,15 +39,15 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public User deleteUser(long userId) {
-        User userDB = userRepository.findById(userId).get();
+    public User deleteUser(String Id) {
+        User userDB = userRepository.findById(Id).get();
         userRepository.delete(userDB);
         return userDB;
     }
 
     @Override
-    public User updateUser(long userId, User user) {
-       User userDB = userRepository.findById(userId).get();
+    public User updateUser(String Id, User user) {
+       User userDB = userRepository.findById(Id).get();
        userDB.setUserName(user.getUserName());
        userDB.setUserEmail(user.getUserEmail());
        return userRepository.save(user);
@@ -55,11 +55,12 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User getUserByemailandPword(String email, String password) {
-        return userRepository.getUserByEmailAndPassword(email,password);
+//        return userRepository.getUserByEmailAndPassword(email,password);
+        return null;
     }
 
     @Override
-    public void addMovie(long userId, String movieId) {
+    public void addMovie(String Id, String movieId) {
 
     }
 

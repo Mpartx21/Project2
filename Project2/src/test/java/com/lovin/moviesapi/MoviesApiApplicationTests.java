@@ -25,11 +25,11 @@ class MoviesApiApplicationTests {
 		System.out.println(user);
 	}
 
-	@Test
-	public void displayGetUserById(){
-		User user = userRepository.getUserById(1);
-		System.out.println(user);
-	}
+//	@Test
+//	public void displayGetUserById(){
+//		User user = userRepository.getUserById(1);
+//		System.out.println(user);
+//	}
 
 //	@Test
 //	public void deleteUserById(){

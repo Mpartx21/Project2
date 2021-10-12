@@ -5,58 +5,34 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
-import java.sql.Array;
+import java.util.List;
 
-@Entity
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(
-        name = "user_table",
-        uniqueConstraints = {@UniqueConstraint(
-                name = "emailid_unique",
-                columnNames = "email_address"
-        ),
-        @UniqueConstraint(
-                name = "user_name_unique",
-                columnNames = "user_name"
-        )
-        }
-
-)
+@Document
 public class User {
+
     @Id
-    @SequenceGenerator(
-            name = "user_sequence",
-            sequenceName = "user_sequence",
-            allocationSize = 1
-    )
-    @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "user_sequence"
-    )
-    private Long userId;
-    private String password;
+    private String id;
     private String firstName;
     private String lastName;
-
-    @Column(
-            name = "user_name",
-            nullable = false
-    )
     private String userName;
-
-    @Column(
-            name = "email_address",
-            nullable = false
-    )
     private String userEmail;
+    private String password;
+    private List<String> favoriteMovies;
 
-    @OneToOne(
-            mappedBy = "user"
-    )
-    private UserFavoriteMovies userFavoriteMovies;
+    public User(String firstName, String lastName, String userName, String userEmail, String password, List<String> favoriteMovies) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.userEmail = userEmail;
+        this.password = password;
+        this.favoriteMovies = favoriteMovies;
+    }
 }
